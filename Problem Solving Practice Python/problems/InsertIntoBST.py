@@ -18,24 +18,24 @@ class TreeNode:
 from typing import Optional
 
 
-class Solution:
-    def insertIntoBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
-        node = TreeNode(val = val)
-        if root is None:
-            return node
-        else:
-            current = root
-            while current is not None:
-                if val > current.val:
-                    if current.right is None:
-                        current.right = node
-                        break
-                    else:
-                        current = current.right
-                else: 
-                    if current.left is None:
-                        current.left = node
-                        break
-                    else:
-                        current = current.left
-        return root
+
+def insertIntoBST(root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
+    node = TreeNode(val = val)
+    if root is None:
+        return node
+    else:
+        current = root
+        while current is not None:
+            if val > current.val:
+                if current.right is None:
+                    current.right = node
+                    break
+                else:
+                    current = current.right
+            else: 
+                if current.left is None:
+                    current.left = node
+                    break
+                else:
+                    current = current.left
+    return root

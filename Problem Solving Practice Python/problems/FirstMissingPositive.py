@@ -38,7 +38,7 @@ Constraints:
 from ast import List
 
 
-def firstMissingPositive(nums:List[int]):
+def firstMissingPositive(nums:List):
     numbers = set(nums)
     i = 1
     while i in numbers:
